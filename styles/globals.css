@@ -1,3 +1,7 @@
+html{
+  padding: 0;
+  box-sizing: border-box;
+}
 .userstab{
   color: blueviolet;
   background-color: rgb(228, 221, 235);
@@ -7,6 +11,13 @@
   border: blueviolet 1px solid;
   border-collapse: collapse;
   padding: 10px;
+}
+.butn{
+  background-color: white;
+  color: blueviolet;
+  padding: 10px 15px;
+  border: solid 2px blueviolet;
+  border-radius: 10px;
 }
 Header{
   background-color: rgb(228, 221, 235);
@@ -30,7 +41,7 @@ Header{
   color: blueviolet;
   font-weight: bold;
   box-shadow: rgba(137, 43, 226, 0.459) 0 10px 40px 0;
-  height: 140px;
+  height: 180px;
   margin: 20px 5px;
   font-size: 18px;
   display: flex;
@@ -47,7 +58,7 @@ Header{
   color: blueviolet;
   font-weight: bold;
   box-shadow: rgba(137, 43, 226, 0.459) 0 10px 40px 0;
-  height: 200px;
+  height: 250px;
   margin: 20px 5px;
   font-size: 18px;
   text-transform: capitalize;

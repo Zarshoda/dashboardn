@@ -1,5 +1,5 @@
 import { getPosts, getTodos, getUsers } from "../api";
-import { SET_POSTS, SET_TODOS, SET_USERS } from "./types";
+import { SET_DARK, SET_POSTS, SET_TODOS, SET_TOGGLE, SET_USERS } from "./types";
 
 const setUsers = async (dispatch) => {
     const res = await getUsers();
@@ -34,4 +34,12 @@ const setPosts = async (dispatch) => {
     }
 }
 
-export { setUsers, setTodos, setPosts };
+const setDark = (dispatch) => {
+    dispatch({ type: SET_DARK });
+}
+
+const setToggle = (dispatch) => {
+    dispatch({ type: SET_TOGGLE });
+}
+
+export { setUsers, setTodos, setPosts, setDark, setToggle };

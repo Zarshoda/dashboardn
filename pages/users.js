@@ -1,9 +1,11 @@
+import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Table } from '@material-ui/core'
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import Header from '../containers/Header'
-import { setUsers } from '../redux/actions';
+import { setToggle, setUsers } from '../redux/actions';
 
 const Users = () => {
     const users = useSelector(state => state.users);
@@ -15,10 +17,11 @@ const Users = () => {
     }, [])
 
     return (
-        <>
+        <div className="d-flex">
             <Header />
             <div className="container">
-                <Table className="text-center userstab">
+                <button className="butn m-3 mb-0" onClick={() => setToggle(dispatch)}><FontAwesomeIcon icon={faAlignJustify} /></button>
+                <Table className="text-center userstab mt-5">
                     <thead className="fs-4">
                         <tr>
                             <th>Id</th>
@@ -41,7 +44,7 @@ const Users = () => {
                     </tbody>
                 </Table>
             </div>
-        </>
+        </div>
     )
 }
 
