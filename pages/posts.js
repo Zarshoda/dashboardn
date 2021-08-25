@@ -20,8 +20,8 @@ const Posts = () => {
             <div className="container">
                 <button className="butn m-3 mb-0" onClick={() => setToggle(dispatch)}><FontAwesomeIcon icon={faAlignJustify} /></button>
                 <div className="row">
-                    {posts.map(v =>
-                        <div className="col-lg-4 col-md-6 col-12">
+                    {posts.map((v, i) =>
+                        <div key={i} className="col-lg-4 col-md-6 col-12">
                             <div className="cardddd d-flex justify-content-center align-items-center">
                                 <div>
                                     <p>{v.title}</p>

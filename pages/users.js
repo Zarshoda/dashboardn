@@ -32,8 +32,8 @@ const Users = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map(v =>
-                            <tr>
+                        {users.map((v, i) =>
+                            <tr key={i}>
                                 <td>{v.id}</td>
                                 <td>{v.name}</td>
                                 <td>{v.username}</td>

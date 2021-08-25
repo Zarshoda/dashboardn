@@ -20,8 +20,8 @@ const Todos = () => {
             <div className="container">
                 <button className="butn m-3 mb-0" onClick={() => setToggle(dispatch)}><FontAwesomeIcon icon={faAlignJustify} /></button>
                 <div className="row">
-                    {todos.map(v =>
-                        <div className="col-lg-3 col-md-6">
+                    {todos.map((v, i) =>
+                        <div key={i} className="col-lg-3 col-md-6">
                             <div className="carddd">
                                 <p>{v.title}</p>
                             </div>
